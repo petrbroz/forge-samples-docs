@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkforge_samples_docs=self.webpackChunkforge_samples_docs||[]).push([[595],{7771:function(s){s.exports=JSON.parse('{"allTagsPath":"/forge-samples-docs/blog/tags","slug":"/forge-samples-docs/blog/tags/hola","name":"hola","count":1,"permalink":"/forge-samples-docs/blog/tags/hola"}')}}]);
