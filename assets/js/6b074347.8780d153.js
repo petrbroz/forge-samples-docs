@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkforge_samples_docs=self.webpackChunkforge_samples_docs||[]).push([[347],{367:function(s){s.exports=JSON.parse('{"allTagsPath":"/forge-samples-docs/blog/tags","slug":"/forge-samples-docs/blog/tags/docusaurus","name":"docusaurus","count":4,"permalink":"/forge-samples-docs/blog/tags/docusaurus"}')}}]);
