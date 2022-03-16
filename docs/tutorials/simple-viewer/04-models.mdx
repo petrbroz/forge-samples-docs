@@ -1,0 +1,26 @@
+---
+sidebar_position: 4
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NodeJSVSCode from './_shared/nodejs-vscode/03-models.mdx';
+import DotNetVSCode from './_shared/dotnet-vscode/03-models.mdx';
+import DotNetVS2022 from './_shared/dotnet-vs2022/03-models.mdx';
+
+# Model Management
+
+Next, let's extend our server so that we can list models, upload them, and also initiate
+their translation for viewing.
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJSVSCode />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVSCode />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVS2022 />
+    </TabItem>
+</Tabs>

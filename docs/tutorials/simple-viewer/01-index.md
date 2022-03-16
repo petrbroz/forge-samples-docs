@@ -21,8 +21,3 @@ Full implementation of this sample is available on GitHub:
 - For Node.js: https://github.com/petrbroz/forge-simple-viewer-nodejs
 - For .NET: https://github.com/petrbroz/forge-simple-viewer-dotnet
 :::
-
-Get started by selecting the programming language of your choice:
-
-- [Node.js](nodejs-vscode/server)
-- [.NET](dotnet-vscode/server)
