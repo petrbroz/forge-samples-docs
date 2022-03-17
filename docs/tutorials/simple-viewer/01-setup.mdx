@@ -1,0 +1,65 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import NodeJsProject from './_shared/nodejs-vscode/01-setup/01-project.md';
+import NodeJsServer from './_shared/nodejs-vscode/01-setup/02-server.md';
+import NodeJsTest from './_shared/nodejs-vscode/01-setup/03-test.md';
+
+import DotNetVsCodeProject from './_shared/dotnet-vscode/01-setup/01-project.md';
+import DotNetVsCodeServer from './_shared/dotnet-vscode/01-setup/02-server.md';
+import DotNetVsCodeTest from './_shared/dotnet-vscode/01-setup/03-test.md';
+
+import DotNetVs2022Project from './_shared/dotnet-vs2022/01-setup/01-project.mdx';
+import DotNetVs2022Server from './_shared/dotnet-vs2022/01-setup/02-server.md';
+import DotNetVs2022Test from './_shared/dotnet-vs2022/01-setup/03-test.md';
+
+# Setup
+
+In this step we're going to create a new project, install all the required dependencies,
+and setup a basic server application.
+
+## Project setup
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJsProject />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVsCodeProject />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVs2022Project />
+    </TabItem>
+</Tabs>
+
+## Basic server
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJsServer />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVsCodeServer />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVs2022Server />
+    </TabItem>
+</Tabs>
+
+## Try it out
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJsTest />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVsCodeTest />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVs2022Test />
+    </TabItem>
+</Tabs>

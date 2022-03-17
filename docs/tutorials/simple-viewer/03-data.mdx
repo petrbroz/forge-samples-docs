@@ -1,0 +1,116 @@
+---
+sidebar_position: 4
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import NodeJsBuckets from './_shared/nodejs-vscode/03-data/01-buckets.md';
+import NodeJsObjects from './_shared/nodejs-vscode/03-data/02-objects.md';
+import NodeJsTranslations from './_shared/nodejs-vscode/03-data/03-translations.md';
+import NodeJsEndpoints from './_shared/nodejs-vscode/03-data/04-endpoints.md';
+import NodeJsTest from './_shared/nodejs-vscode/03-data/05-test.md';
+
+import DotNetVsCodeBuckets from './_shared/dotnet-vscode/03-data/01-buckets.md';
+import DotNetVsCodeObjects from './_shared/dotnet-vscode/03-data/02-objects.md';
+import DotNetVsCodeTranslations from './_shared/dotnet-vscode/03-data/03-translations.md';
+import DotNetVsCodeEndpoints from './_shared/dotnet-vscode/03-data/04-endpoints.md';
+import DotNetVsCodeTest from './_shared/dotnet-vscode/03-data/05-test.md';
+
+import DotNetVs2022Buckets from './_shared/dotnet-vs2022/03-data/01-buckets.md';
+import DotNetVs2022Objects from './_shared/dotnet-vs2022/03-data/02-objects.md';
+import DotNetVs2022Translations from './_shared/dotnet-vs2022/03-data/03-translations.md';
+import DotNetVs2022Endpoints from './_shared/dotnet-vs2022/03-data/04-endpoints.md';
+import DotNetVs2022Test from './_shared/dotnet-vs2022/03-data/05-test.md';
+
+# Data & Translations
+
+Next, let's extend our server so that we can list models, upload them, and also initiate
+their translation for viewing.
+
+## Creating buckets
+
+First, let's make sure that our application has a bucket in the Data Management service
+to store its files in. Typically the bucket would be created just once as part of a provisioning
+step but in our sample we will implement a helper function that will make sure that the bucket
+is available, and use it in other parts of the server app.
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJsBuckets />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVsCodeBuckets />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVs2022Buckets />
+    </TabItem>
+</Tabs>
+
+## Listing and uploading objects
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJsObjects />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVsCodeObjects />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVs2022Objects />
+    </TabItem>
+</Tabs>
+
+## Translating models
+
+Finally, we will implement a couple of helper functions that will extract various types of information
+from the uploaded files - for example, 2D drawings, 3D geometry, and metadata - that we can later load
+into the Forge Viewer component in our HTML page. To do so, we will need to start a new conversion job
+in the [Model Derivative](https://forge.autodesk.com/en/docs/model-derivative/v2/developers_guide/overview)
+service, and checking the status of the conversion. Also, the Model Derivative service requires all IDs
+we use in the API calls to be [base64](https://wikipedia.org/wiki/Base64)-encoded, so we include a small
+utility function that will help with that.
+
+:::info
+Base64-encoded IDs are referred to as _URNs_.
+:::
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJsTranslations />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVsCodeTranslations />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVs2022Translations />
+    </TabItem>
+</Tabs>
+
+## Server endpoints
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJsEndpoints />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVsCodeEndpoints />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVs2022Endpoints />
+    </TabItem>
+</Tabs>
+
+## Try it out
+
+<Tabs groupId="operating-systems">
+    <TabItem value="nodejs-vscode" label="Node.js (VSCode)" default>
+        <NodeJsTest />
+    </TabItem>
+    <TabItem value="dotnet-vscode" label=".NET 6 (VSCode)">
+        <DotNetVsCodeTest />
+    </TabItem>
+    <TabItem value="dotnet-vs2022" label=".NET 6 (VS2022)">
+        <DotNetVs2022Test />
+    </TabItem>
+</Tabs>
