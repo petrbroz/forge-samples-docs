@@ -1,5 +1,6 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const jargonPlugin = require('./src/remark/jargon.js');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -107,7 +108,8 @@ module.exports = {
             {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    editUrl: 'https://github.com/petrbroz/forge-samples-docs/edit/master/'
+                    editUrl: 'https://github.com/petrbroz/forge-samples-docs/edit/master/',
+                    remarkPlugins: [jargonPlugin]
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css')

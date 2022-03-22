@@ -39,3 +39,44 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* Jargon styling */
+
+.jargon-term {
+  text-decoration: underline dotted var(--ifm-color-primary);
+}
+
+.jargon-term::after {
+  content: "?";
+  font-weight: bold;
+  display: inline-block;
+  transform: translate(0, -0.5em);
+  font-size: 75%;
+  color: var(--ifm-color-primary);
+  margin-left: 3px;
+}
+
+.jargon-term:hover {
+  position: relative;
+  text-decoration: none;
+  cursor: help;
+}
+
+.jargon-term .jargon-info {
+  display: none
+}
+
+.jargon-term:hover .jargon-info {
+  display: block;
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  background: #F8F8F8;
+  border: 1px solid #DCDCDC;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 90%;
+  min-width: 250px;
+  max-width: 450px;
+  z-index: 1;
+}
