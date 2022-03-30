@@ -18,6 +18,16 @@ module.exports = {
             {
                 hashed: true
             }
+        ],
+        [
+            require.resolve('@docusaurus/plugin-ideal-image'),
+            {
+              quality: 90,
+              max: 1024,
+              min: 640,
+              steps: 2,
+              disableInDev: false
+            }
         ]
     ],
     themeConfig: {
