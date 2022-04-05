@@ -5,8 +5,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
     title: 'Autodesk Forge Tutorials',
     tagline: 'Getting started with the Autodesk Forge platform',
-    url: 'https://autodesk-forge.github.io',
-    baseUrl: '/forge-tutorials-website/',
+    url: 'https://forge-tutorials.autodesk.io',
+    baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
